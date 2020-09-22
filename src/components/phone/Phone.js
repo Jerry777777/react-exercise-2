@@ -13,7 +13,10 @@ class Phone extends React.Component {
       <section>
         <h3 className="model">{this.props.id}</h3>
         <img className="image-size" alt="product_image" src={Image}></img>
-        <h3 className="price">{this.props.price}</h3>
+        <h3 className="price">
+          {this.props.price}{' '}
+          <button className="add-to-cart">add to cart</button>
+        </h3>
       </section>
     );
   }
