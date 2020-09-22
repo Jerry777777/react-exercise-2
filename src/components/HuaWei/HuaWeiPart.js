@@ -5,9 +5,9 @@ class HuaWeiPart extends React.Component {
   constructor(props) {
     super(props);
     this.phoneModel = [
-      { model: 'HUAWEI P40 Pro+' },
-      { model: 'HUAWEI Mate 30' },
-      { model: 'HUAWEI nova 7' },
+      { model: 'HUAWEI P40 Pro+', price: 7999 },
+      { model: 'HUAWEI Mate 30', price: 5000 },
+      { model: 'HUAWEI nova 7', price: 4000 },
     ];
   }
 
@@ -17,7 +17,7 @@ class HuaWeiPart extends React.Component {
         <h2>HUAWEI</h2>
         <article>
           {this.phoneModel.map((phone) => (
-            <Phone id={phone.model} key={phone.model} />
+            <Phone id={phone.model} key={phone.model} price={phone.price} />
           ))}
         </article>
       </section>

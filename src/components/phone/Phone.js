@@ -13,11 +13,13 @@ class Phone extends React.Component {
       <section>
         <h3 className="model">{this.props.id}</h3>
         <img className="image-size" alt="product_image" src={Image}></img>
+        <h3 className="price">{this.props.price}</h3>
       </section>
     );
   }
 }
 Phone.propTypes = {
   id: PropTypes.string,
+  price: PropTypes.string,
 };
 export default Phone;
