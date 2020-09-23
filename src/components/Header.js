@@ -1,6 +1,6 @@
 import React from 'react';
 import Cart from './Cart';
-import PropTypes from 'prop-types';
+import './Header.scss';
 
 export default class Header extends React.Component {
   render() {
@@ -12,6 +12,3 @@ export default class Header extends React.Component {
     );
   }
 }
-Header.propTypes = {
-  number: PropTypes.number,
-};
