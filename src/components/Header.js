@@ -1,12 +1,17 @@
 import React from 'react';
-import ImageCart from '../assets/cart.png';
+import Cart from './Cart';
+import PropTypes from 'prop-types';
 
-const Header = () => (
-  <section className="header">
-    <h1>
-      Store
-      <img className="image-cart" alt="product_image" src={ImageCart}></img>
-    </h1>
-  </section>
-);
-export default Header;
+export default class Header extends React.Component {
+  render() {
+    return (
+      <header>
+        <h1 id="title">Store</h1>
+        <Cart number={this.props.number} />
+      </header>
+    );
+  }
+}
+Header.propTypes = {
+  number: PropTypes.number,
+};

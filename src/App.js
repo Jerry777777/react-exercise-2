@@ -1,18 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.scss';
 import Header from './components/Header';
-import IphonePart from './components/Iphone/IphonePart';
-import HuaWeiPart from './components/HuaWei/HuaWeiPart';
+import Goods from './components/Goods';
 
-class App extends Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      number: 0,
+    };
+  }
+
   render() {
     return (
       <main className="app">
-        <Header />
-        <IphonePart />
-        <HuaWeiPart />
+        <Header number={this.state.number} />
+        <Goods cartHandler={this.cartHandler} />
       </main>
     );
   }
+
+  cartHandler = () => {
+    this.setState({
+      number: this.state.number + 1,
+    });
+  };
 }
+
 export default App;
